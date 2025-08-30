@@ -1,10 +1,10 @@
 import axios from "axios";
-import config from "../config/index";
+
 
 export const axiosInstance = axios.create({
-  baseURL: config.baseUrl,
+  baseURL: import.meta.env.VITE_BASE_URL,
 
- withCredentials:true
+  withCredentials: true,
 });
 
 // Add a request interceptor
