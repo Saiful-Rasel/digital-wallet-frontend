@@ -23,8 +23,7 @@ const LoginSchema = z.object({
 });
 
 export function LoginForm({
-  className,
-  ...props
+
 }: React.ComponentProps<"div">) {
   const navigate = useNavigate();
   const form = useForm<z.infer<typeof LoginSchema>>({
@@ -38,8 +37,8 @@ export function LoginForm({
   const [Login] = useLoginMutation();
   const onSubmit = async (data: z.infer<typeof LoginSchema>) => {
 
-      const res = await Login(data).unwrap();
-      console.log(res)
+     await Login(data).unwrap();
+    
       toast.success("User Logged In SuccessFully");
 
       navigate("/");

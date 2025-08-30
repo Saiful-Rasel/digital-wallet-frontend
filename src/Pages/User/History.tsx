@@ -14,9 +14,7 @@ import { useTransactionHistoryQuery } from "@/Redux/feature/trransaction/transac
 import { Button } from "@/components/ui/button";
 
 
-interface ItransactionHistoryProps {
-  role: "USER" | "AGENT";
-} 
+
 export default function TransactionHistory() {
   const { data, isLoading } = useTransactionHistoryQuery(undefined);
   const transactions = data?.data || [];

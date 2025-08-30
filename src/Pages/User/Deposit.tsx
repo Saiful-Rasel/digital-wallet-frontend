@@ -1,5 +1,5 @@
 // src/Pages/User/Deposit.tsx
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useDepositWalletMutation } from "@/Redux/feature/wallet/wallet.api";
@@ -15,10 +15,10 @@ export default function Deposit() {
       return toast.error("Please enter a valid amount");
     }
     try {
-      const res = await depositWallet({ balance: amount }).unwrap();
+     await depositWallet({ balance: amount }).unwrap();
       toast.success("Deposit successful!");
-      setBalance(""); // Reset input after successful deposit
-      console.log(res);
+      setBalance(""); 
+
     } catch (error: any) {
       console.error("Deposit error:", error);
       toast.error(error.data?.message || "Deposit failed. Please try again.");

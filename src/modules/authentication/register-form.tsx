@@ -26,8 +26,8 @@ const RegisterSchema = z.object({
 });
 
 export function RegisterForm({
-  className,
-  ...props
+ 
+  
 }: React.ComponentProps<"div">) {
   const [userRegister] = useRegisterMutation();
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ export function RegisterForm({
       password: data.password,
     };
     try {
-      const res = await userRegister(userInfo).unwrap();
+    await userRegister(userInfo).unwrap();
 
       toast.success(
         "User Register SuccessFully And Register Bonus You Get 50 Taka Into Your Wallet"

@@ -23,7 +23,7 @@ export default function Withdraw() {
     }
 
     try {
-      const res = await userCashOut({ agentId, balance: withdrawBalance }).unwrap();
+       await userCashOut({ agentId, balance: withdrawBalance }).unwrap();
       toast.success("Withdraw successful!");
       setBalance("");
       setAgentId("");

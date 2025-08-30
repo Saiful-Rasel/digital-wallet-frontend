@@ -38,7 +38,7 @@ export default function Navbar() {
   const [logOut] = useLogOutMutation();
   const handleLogout = async () => {
     try {
-      const res = await logOut({}).unwrap();
+  await logOut({}).unwrap();
       dispatch(authApi.util.resetApiState());
     } catch (error) {
       console.log(error);
@@ -77,7 +77,7 @@ export default function Navbar() {
             <PopoverContent align="start" className="w-36 p-1 md:hidden">
               <NavigationMenu className="max-w-none *:w-full">
                 <NavigationMenuList className="flex-col items-start gap-2">
-                  {publicLinks.map((link, index, role) => (
+                  {publicLinks.map((link, index) => (
                     <>
                       {link.role === "PUBLIC" && (
                         <NavigationMenuItem className="font-semibold" key={index}>

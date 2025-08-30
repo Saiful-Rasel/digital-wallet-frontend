@@ -7,8 +7,11 @@ import {
  
 
 } from "@/components/ui/dropdown-menu"
-import { useTheme } from "@/provider/Theme-provider"
+
 import { DropdownMenuItem, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu"
+import { useTheme } from "@/provider/theme-provider"
+
+
 
  
 export function ModeToggle() {

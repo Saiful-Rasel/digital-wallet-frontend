@@ -24,7 +24,7 @@ export default function CashIn() {
     }
 
     try {
-      const res = agentCashIn({userId,balance: CashInBalance}).unwrap();
+      agentCashIn({userId,balance: CashInBalance}).unwrap();
       toast.success("CashIn successful!");
       setBalance("");
       setUserId("");
