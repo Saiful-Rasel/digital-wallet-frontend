@@ -20,4 +20,4 @@ Toasts & Notifications: react-hot-toast / shadcn/ui
 API: Axios
 
 # LIve Url 
-https://digital-wallet-frontend-xi.vercel.app
+https://digital-wallet-frontend-xi.vercel.app/
